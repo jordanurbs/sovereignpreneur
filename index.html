@@ -776,15 +776,13 @@ figure.portrait img {
     <div class="hud-corner br"></div>
   </div>
 
-  <div class="hex-readout" title="Bitcoin 2026 · Las Vegas · live chain telemetry">
-    <div class="hex-line">BTC 2026 · LAS VEGAS</div>
-    <div class="hex-line">LAT: 36.1147 N</div>
-    <div class="hex-line">LON: 115.1728 W</div>
+  <div class="hex-readout" title="Bitcoin 2026 · Las Vegas · live chain tip · genesis">
+    <div class="hex-line">36.1147 N</div>
+    <div class="hex-line">115.1728 W</div>
     <div class="hex-line">---</div>
-    <div class="hex-line" data-role="tip-label">TIP: —</div>
+    <div class="hex-line" data-role="tip-label">—</div>
     <div class="hex-line" data-role="tip-hash">0x…</div>
     <div class="hex-line">---</div>
-    <div class="hex-line">GENESIS: 000000</div>
     <div class="hex-line" data-role="genesis">0x000000000019d6689c085ae1</div>
   </div>
 
@@ -1100,7 +1098,7 @@ async function refreshChainTip() {
     const heightRes = await fetch('https://mempool.space/api/blocks/tip/height', { cache: 'no-store' });
     const height = parseInt(await heightRes.text(), 10);
     if (!Number.isFinite(height)) return;
-    tipLabelEl.textContent = 'TIP: ' + height.toLocaleString();
+    tipLabelEl.textContent = height.toLocaleString();
 
     const hashRes = await fetch('https://mempool.space/api/block-height/' + height, { cache: 'no-store' });
     const hash = (await hashRes.text()).trim();
