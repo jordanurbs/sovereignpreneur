@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Sovereignpreneur — A Declaration of Production</title>
+<meta name="description" content="A declaration of language and stance on sovereignty over money, production, and lifestyle in the age of AI. Four axioms, one category, one protocol." />
+<meta name="author" content="Jordan Urbs" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Sovereignpreneur — A Declaration of Production" />
+<meta property="og:description" content="Four axioms. One category. One protocol. On sovereignty over money, production, and lifestyle in the age of AI." />
+<meta property="og:url" content="https://createownscale.com/" />
+<meta property="og:image" content="https://createownscale.com/images/declaration-og.png" />
+<meta property="og:site_name" content="Create. Own. Scale." />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Sovereignpreneur — A Declaration of Production" />
+<meta name="twitter:description" content="Four axioms. One category. One protocol." />
+<meta name="twitter:image" content="https://createownscale.com/images/declaration-og.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+:root {
+  --bg:            #050D1A;
+  --bg-raised:     #0A1524;
+  --border:        #1A2A3F;
+  --text:          #E8ECEF;
+  --text-muted:    #8899AA;
+  --orange:        #F7931A;
+  --orange-soft:   rgba(247,147,26,0.12);
+  --orange-line:   rgba(247,147,26,0.4);
+  --cyan:          #00BFFF;
+  --amber:         #FFB347;
+  --max-w:         760px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lock scroll until the hero intro animation finishes */
+body.intro-locked {
+  overflow: hidden;
+}
+
+/* ---- Top banner ---- */
+.banner {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(5,13,26,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 20px;
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.banner-text { flex: 1; text-align: center; }
+.banner strong { color: var(--orange); font-weight: 500; }
+.banner-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 3px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.banner-github:hover { color: var(--orange); border-color: var(--orange-line); }
+.banner-github svg { width: 14px; height: 14px; fill: currentColor; }
+@media (max-width: 640px) {
+  .banner { padding: 8px 12px; gap: 10px; font-size: 11px; }
+  .banner-github span { display: none; }
+  .banner-github { padding: 4px 8px; }
+}
+
+/* ---- Layout ---- */
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 72px 24px 120px;
+}
+
+/* ---- Header block ---- */
+.meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+h1.title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(40px, 6vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+.subtitle {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(20px, 2.4vw, 26px);
+  color: var(--amber);
+  margin: 0 0 40px;
+  line-height: 1.3;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--orange-line), transparent);
+  margin: 48px 0;
+}
+
+/* ---- Section headings ---- */
+h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  margin: 56px 0 8px;
+  color: var(--text);
+}
+h2 .numeral {
+  font-family: 'Fraunces', Georgia, serif;
+  color: var(--orange);
+  font-weight: 400;
+  margin-right: 14px;
+  font-style: italic;
+}
+h2 + .axiom-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 40px 0 12px;
+  color: var(--text);
+}
+
+/* ---- Prose ---- */
+p {
+  margin: 0 0 20px;
+  color: var(--text);
+}
+
+.lede {
+  font-size: 19px;
+  color: var(--text);
+}
+
+.lede strong,
+p strong {
+  color: var(--orange);
+  font-weight: 500;
+}
+
+.pullquote {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--amber);
+  border-left: 2px solid var(--orange);
+  padding: 8px 0 8px 24px;
+  margin: 32px 0;
+  line-height: 1.45;
+}
+
+em { color: var(--amber); font-style: italic; }
+
+/* ---- Prose links (brand-colored, match attributions) ---- */
+main p a, main li a {
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--orange-line);
+  transition: border-color 0.15s ease;
+}
+main p a:hover, main li a:hover { border-bottom-color: var(--orange); }
+
+/* ---- Attribution tag ---- */
+.attrib {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: -8px;
+  margin-bottom: 28px;
+  letter-spacing: 0.02em;
+}
+.attrib a { color: var(--orange); text-decoration: none; border-bottom: 1px dotted var(--orange-line); }
+.attrib a:hover { border-bottom-color: var(--orange); }
+
+/* ---- Category block ---- */
+.category {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--orange);
+  padding: 32px;
+  margin: 48px 0;
+  border-radius: 2px;
+}
+.category h3 { margin-top: 0; }
+.category ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+.category li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 16px;
+}
+.category li:last-child { border-bottom: none; }
+.category li strong { color: var(--orange); font-weight: 500; }
+
+/* ---- Protocol block ---- */
+.protocol {
+  margin: 48px 0;
+}
+.protocol-step {
+  margin: 28px 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+}
+.protocol-step:first-child { border-top: 1px solid var(--orange-line); }
+.protocol-step:last-child  { border-bottom: 1px solid var(--orange-line); }
+.protocol-step .verb {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: -0.01em;
+  display: inline-block;
+  margin-right: 16px;
+  min-width: 120px;
+}
+
+/* ---- Closing ---- */
+.closing {
+  margin: 64px 0 48px;
+  padding: 48px 0;
+  text-align: center;
+  border-top: 1px solid var(--orange-line);
+  border-bottom: 1px solid var(--orange-line);
+}
+.closing p {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(22px, 3vw, 28px);
+  font-style: italic;
+  color: var(--text);
+  margin: 12px 0;
+  line-height: 1.3;
+}
+.closing p:last-child { color: var(--amber); }
+
+/* ---- Contribute block ---- */
+.contribute {
+  margin: 48px 0;
+  padding: 32px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--orange);
+  border-radius: 2px;
+  text-align: left;
+}
+.contribute-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--orange);
+  margin-bottom: 12px;
+  display: block;
+}
+.contribute h3 {
+  margin: 0 0 12px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text);
+}
+.contribute p {
+  margin: 0 0 20px;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+.contribute-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--orange);
+  text-decoration: none;
+  padding: 10px 16px;
+  border: 1px solid var(--orange-line);
+  border-radius: 2px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.contribute-cta:hover {
+  background: var(--orange-soft);
+  border-color: var(--orange);
+}
+.contribute-cta .arrow { transition: transform 0.15s ease; }
+.contribute-cta:hover .arrow { transform: translateX(3px); }
+
+/* ---- Signature ---- */
+.signature {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.9;
+  text-align: center;
+  margin: 48px 0;
+}
+.signature a {
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--orange-line);
+}
+.signature a:hover { border-bottom-color: var(--orange); }
+.signature .name {
+  color: var(--text);
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+/* ---- Attribution footer ---- */
+.attributions {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.attributions h3 {
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin: 0 0 20px;
+  font-weight: 500;
+}
+.attributions ul { padding-left: 20px; margin: 0 0 24px; }
+.attributions li { margin: 10px 0; }
+.attributions a {
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--orange-line);
+}
+.attributions a:hover { border-bottom-color: var(--orange); }
+
+/* ---- Revisions ---- */
+.revisions {
+  margin-top: 48px;
+  padding: 24px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.revisions h3 {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+/* ---- Figures ---- */
+figure {
+  margin: 48px 0 32px;
+  padding: 0;
+}
+figure.breakout {
+  /* extend beyond prose column */
+  margin-left: calc(-1 * ((100vw - var(--max-w)) / 4));
+  margin-right: calc(-1 * ((100vw - var(--max-w)) / 4));
+  max-width: none;
+}
+@media (max-width: 900px) {
+  figure.breakout { margin-left: 0; margin-right: 0; }
+}
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+figure figcaption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 14px;
+  font-weight: 400;
+}
+figure figcaption .fig-label {
+  color: var(--orange);
+  margin-right: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* Stack image sized modestly since it's portrait */
+figure.portrait img {
+  max-width: 380px;
+  margin: 0 auto;
+  border: none;
+  box-shadow: none;
+}
+
+/* ---- Small utilities ---- */
+.small { font-size: 14px; color: var(--text-muted); }
+
+/* ---- Selection ---- */
+::selection { background: var(--orange); color: var(--bg); }
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+  main { padding: 48px 20px 80px; }
+  h2 { font-size: 24px; }
+  .protocol-step .verb { display: block; margin-bottom: 8px; }
+  .hero-hud-corners { display: none; }
+  .hex-readout { display: none; }
+  .hero-grid { display: none; }
+}
+
+/* ============================================================
+   HERO — MILITARY TERMINAL AESTHETIC
+   ============================================================ */
+
+/* ---- CRT Overlay ---- */
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 3px, 3px 100%;
+  opacity: 0.35;
+}
+
+.crt-flicker {
+  animation: crtFlicker 4s infinite;
+}
+
+@keyframes crtFlicker {
+  0%, 100% { opacity: 0.35; }
+  5% { opacity: 0.32; }
+  10% { opacity: 0.35; }
+  15% { opacity: 0.30; }
+  20% { opacity: 0.35; }
+  50% { opacity: 0.35; }
+  52% { opacity: 0.28; }
+  54% { opacity: 0.35; }
+  90% { opacity: 0.35; }
+  92% { opacity: 0.30; }
+  94% { opacity: 0.35; }
+}
+
+/* ---- Vignette ---- */
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(5,13,26,0.6) 100%);
+}
+
+/* ---- Hero Section ---- */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 56px 24px 100px;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: var(--max-w);
+  width: 100%;
+}
+
+/* ---- Coordinate Grid Background ---- */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  background-image:
+    linear-gradient(rgba(0,191,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,191,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform-origin: center center;
+}
+
+/* ---- HUD Corner Brackets ---- */
+.hero-hud-corners {
+  position: absolute;
+  inset: 24px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hud-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: rgba(247,147,26,0.5);
+  border-style: solid;
+  opacity: 0;
+}
+
+.hud-corner.tl { top: 0; left: 0; border-width: 2px 0 0 2px; }
+.hud-corner.tr { top: 0; right: 0; border-width: 2px 2px 0 0; }
+.hud-corner.bl { bottom: 0; left: 0; border-width: 0 0 2px 2px; }
+.hud-corner.br { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
+
+/* ---- Hex Readout ---- */
+.hex-readout {
+  position: absolute;
+  top: 40px;
+  right: 44px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: rgba(0,191,255,0.4);
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  text-align: right;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+}
+
+/* ---- Meta Terminal ---- */
+.hero-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+}
+
+.hero-meta .prompt {
+  color: var(--orange);
+}
+
+.hero-meta .cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: var(--orange);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ---- Title Scramble ---- */
+.hero-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(40px, 6vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  color: var(--text);
+  min-height: 1.2em;
+}
+
+.hero-title .char {
+  display: inline-block;
+  opacity: 0;
+}
+
+.hero-title .char.revealed {
+  opacity: 1;
+}
+
+.hero-title .char.scramble {
+  color: var(--orange);
+  opacity: 0.6;
+}
+
+/* ---- Subtitle Type-on ---- */
+.hero-subtitle {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(20px, 2.4vw, 26px);
+  color: var(--amber);
+  margin: 0 0 28px;
+  line-height: 1.3;
+  min-height: 1.3em;
+}
+
+.hero-subtitle .type-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.1em;
+  background: var(--amber);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+/* ---- Lede ---- */
+.hero-lede {
+  font-size: 19px;
+  color: var(--text);
+  margin: 0 0 20px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* ---- Divider Scan ---- */
+.hero-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--orange-line), transparent);
+  margin: 32px 0 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--orange), transparent);
+}
+
+.hero-divider.scanning::after {
+  animation: scanLine 1.5s ease-in-out forwards;
+}
+
+@keyframes scanLine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ---- Scroll Indicator ---- */
+.scroll-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.scroll-indicator .arrow {
+  width: 1px;
+  height: 30px;
+  background: linear-gradient(to bottom, var(--orange), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.7); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+/* ---- Section Reveal (for headings below hero) ---- */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ---- Pullquote glow on scroll ---- */
+.pullquote {
+  transition: text-shadow 0.6s ease;
+}
+
+.pullquote.glow {
+  text-shadow: 0 0 20px rgba(255,179,71,0.15);
+}
+</style>
+</head>
+<body class="intro-locked">
+
+<!-- CRT & Vignette Overlays -->
+<div class="crt-overlay crt-flicker"></div>
+<div class="vignette"></div>
+
+<div class="banner">
+  <span class="banner-text"><strong>Published 2026 — Open Access</strong> &nbsp;·&nbsp; A declaration of language and stance.</span>
+  <a class="banner-github" href="https://github.com/jordanurbs/sovereignpreneur" target="_blank" rel="noopener" aria-label="Contribute on GitHub">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    <span>Contribute</span>
+  </a>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero" id="hero">
+  <div class="hero-grid"></div>
+
+  <div class="hero-hud-corners">
+    <div class="hud-corner tl"></div>
+    <div class="hud-corner tr"></div>
+    <div class="hud-corner bl"></div>
+    <div class="hud-corner br"></div>
+  </div>
+
+  <div class="hex-readout" title="Bitcoin 2026 · Las Vegas · live chain telemetry">
+    <div class="hex-line">BTC 2026 · LAS VEGAS</div>
+    <div class="hex-line">LAT: 36.1147 N</div>
+    <div class="hex-line">LON: 115.1728 W</div>
+    <div class="hex-line">---</div>
+    <div class="hex-line" data-role="tip-label">TIP: —</div>
+    <div class="hex-line" data-role="tip-hash">0x…</div>
+    <div class="hex-line">---</div>
+    <div class="hex-line">GENESIS: 000000</div>
+    <div class="hex-line" data-role="genesis">0x000000000019d6689c085ae1</div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-meta">
+      <span class="prompt">$</span>
+      <span class="meta-text">cat declaration_001.txt</span>
+      <span class="cursor"></span>
+    </div>
+
+    <h1 class="hero-title" data-text="The Sovereignpreneur">The Sovereignpreneur</h1>
+
+    <p class="hero-subtitle">
+      <span class="subtitle-text"></span><span class="type-cursor"></span>
+    </p>
+
+    <p class="hero-lede">On sovereignty over money, production, and lifestyle in the age of AI.</p>
+
+    <hr class="hero-divider" />
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll to Decrypt</span>
+    <div class="arrow"></div>
+  </div>
+</section>
+
+<main>
+
+  <h3>Preamble</h3>
+  <p>This is a stance, not a product.</p>
+
+  <p>It names a category of economic actor that did not previously exist, and the conditions under which that actor becomes possible. It borrows from two lenses already in circulation — Jeff Booth's insistence that the natural state of the free market is deflation, and the <em>Bitcoin Lens</em> school of thought that treats Bitcoin as a thermodynamic reference frame rather than a financial instrument — and adds a third move. Where Bitcoin gives us a reference frame outside fiat, AI gives us a production apparatus outside <em>"the team"</em> — the employees, contractors, agencies, and coordination overhead that, until recently, production at scale required. Together, at the scale of a single human being, they make possible a life that was until very recently unavailable at any price.</p>
+
+  <p>This declaration is written for the people who already suspect this is true and want it named clearly. <strong>Four axioms, one category, one protocol.</strong></p>
+
+  <hr class="divider" />
+
+  <!-- AXIOM I -->
+  <h2><span class="numeral">I.</span>On Deflation</h2>
+  <p class="axiom-label">Axiom I</p>
+
+  <p class="pullquote">The natural state of the free market is deflation.</p>
+
+  <p>Exponential technology implies exponential abundance. Every year, more humans can produce more value for more people at lower cost. In a healthy system, this appears as falling prices, rising purchasing power, and the quiet expansion of what an ordinary life can contain. In the system we actually inhabit, this appears instead as a collision between arithmetic and policy — a debt-based currency that must print into deflation in order to survive its own logic.</p>
+
+  <p>The arithmetic wins. It has already begun winning. The visible effects — inflationary pulses followed by deflationary collapses, supply-chain disorder, jobs departing from industries that have not yet finished disbelieving in AI — are not anomalies. They are the shape of a system compensating for a truth it was built to ignore.</p>
+
+  <p>The sovereignpreneur accepts this truth and positions accordingly.</p>
+
+  <figure class="breakout">
+    <img src="images/rupture-timeline.png" alt="Chaotic inflation and deflation waves above, a steady Bitcoin line below" />
+    <figcaption><span class="fig-label">Fig. I</span> Turbulence above. Stability below.</figcaption>
+  </figure>
+
+  <p class="attrib">↳ Originally named and argued by <a href="https://www.jeffbooth.ca/books" target="_blank" rel="noopener">Jeff Booth, <em>The Price of Tomorrow</em> (2020)</a>, and extended in his interviews and public talks. The framing of "agency or annihilation" is his.</p>
+
+  <!-- AXIOM II -->
+  <h2><span class="numeral">II.</span>On the Reference Frame</h2>
+  <p class="axiom-label">Axiom II</p>
+
+  <p>Bitcoin is not merely an asset.</p>
+
+  <p>It is the first reference frame outside fiat — a place to measure from whose integrity is enforced by thermodynamic constraint rather than institutional trust. Its block-time is an integer-valued temporal coordinate. Its ledger is the first auditable record of irreversible work conducted outside the system whose observers built it. To measure Bitcoin in dollars is to reverse the frame: it collapses a reference back into a unit that requires reference.</p>
+
+  <p class="pullquote">The move is to measure from Bitcoin, not in Bitcoin.</p>
+
+  <figure class="breakout">
+    <img src="images/lens-inversion.png" alt="Two panels. Left: dollar sign with arrows pointing inward from labor, time, energy, and Bitcoin. Right: glowing Bitcoin symbol with arrows radiating outward to dollars, labor, time, energy." />
+    <figcaption><span class="fig-label">Fig. II</span> The fiat lens measures Bitcoin. The Bitcoin lens measures from it.</figcaption>
+  </figure>
+
+  <p>This same move, applied to labor, reveals a second frame. Most measurements of AI are denominated in fiat savings — <em>"AI replaced a $60,000 employee."</em> This is the fiat lens on production. The Bitcoin-native lens is different: AI is not cost reduction. It is <strong>sovereign production</strong>. It is what lets one human, with taste and direction, produce at the scale of a team, priced in energy rather than salary, compounding in capability rather than headcount.</p>
+
+  <p>There is a physics beneath this, though not the kind most writers reach for. In the strongest physics-aware literature on the subject, freedom is not the absence of constraint — it is the presence of <strong>maximal responsive capacity within a coherent system of constraints</strong>. Fiat currency has arbitrary constraints imposed from outside; Bitcoin has intrinsic constraints enforced by thermodynamics. A salaried employee has arbitrary constraints imposed by an employer; an AI-leveraged operator has intrinsic constraints imposed by energy, judgment, and consequence. The reference-frame shift is not from constraint to freedom. It is from <em>arbitrary constraint to coherent constraint</em>. That shift is what the sovereignty stack names.</p>
+
+  <p class="attrib">↳ This reframe borrows directly from <a href="https://bitcoinlens.net" target="_blank" rel="noopener">The Bitcoin Lens</a> — an independent research project that treats Bitcoin as a thermodynamic object and names its block-time as the first externally observable quantized time coordinate. Philosophical framing via the <strong>constrained-disorder principle</strong> and <a href="https://www.edge.org/conversation/carlo_rovelli-free-will-determinism-quantum-theory-and-statistical-fluctuations-a" target="_blank" rel="noopener">Carlo Rovelli's insistence</a> that freedom is the structure of possibility, not lawlessness. See Further Reading.</p>
+
+  <!-- AXIOM III -->
+  <h2><span class="numeral">III.</span>On Production</h2>
+  <p class="axiom-label">Axiom III</p>
+
+  <p>AI collapses the cost of output to the cost of energy plus human direction.</p>
+
+  <p>What once required a team — writing, code, media, research, support, distribution — can now be orchestrated by a single person with clear intent. The bottleneck has moved. It used to sit on capital and labor. It now sits on <strong>taste, judgment, and the ability to hold a clear picture of a desired end state</strong> while directing a machine toward it. The human who holds the keys, signs the work, and carries the consequences is the anchor the machine cannot replace. The human role has not shrunk. It has elevated.</p>
+
+  <p>The sovereignpreneur operates from this shift as a given. They do not sell hours. They do not sell seats. They sell outcomes produced through orchestration, at margins that were mathematically impossible five years ago and will be table stakes five years from now.</p>
+
+  <p class="pullquote">Labor, measured honestly, is priced in energy — not in salary.</p>
+
+  <!-- AXIOM IV -->
+  <h2><span class="numeral">IV.</span>On Agency</h2>
+  <p class="axiom-label">Axiom IV</p>
+
+  <p class="pullquote">Agency is not granted. It is claimed.</p>
+
+  <p>Every unit of fiat routed through, every third party depended on, every platform whose terms of service change without warning, every employer who decides whether you are "still needed" — each is a small delegation of agency away from the self. Most of these delegations were never consciously made. They were inherited, assumed, unexamined. <strong>The sovereignpreneur examines them.</strong></p>
+
+  <p>Claiming agency is not an act of withdrawal. It is an act of construction. You hold your own keys. You run your own node. You own your own audience — the list, not the follower count. You run your own models where you can, on the hardware in front of you, under the sun falling on your roof. You direct your own production. You choose your own terms. The work is not to opt out of society — the work is to build the portions of your own life that you used to rent.</p>
+
+  <p>Frontier compute is a convenience, not a requirement. A laptop and a few panels is already enough to produce at scale. Centralized attention is a channel, not a home — the audience lives where you can reach them without permission.</p>
+
+  <p>Two cautions to keep this honest. First, freedom from coercion is not the same as freedom to act well. Removing employers, banks, and platforms clears the field; it does not supply self-mastery. <a href="https://plato.stanford.edu/entries/liberty-positive-negative/" target="_blank" rel="noopener">Negative liberty</a> is the precondition; positive liberty — the ability to actually direct a life — is the companion work, and the work never ends. Second, non-interference is not the same as non-domination. A hosting provider who has not yet deplatformed you is still a hosting provider who could. Sovereignty is measured by arbitrary power held over you, not by whether that power has been exercised yet.</p>
+
+  <p>The default state of a human who refuses to outsource these decisions — and does the interior work that outsourcing used to paper over — is sovereignty.</p>
+
+  <figure class="breakout">
+    <img src="images/agency-or-annihilation.png" alt="Two columns. Left in muted grey: Employer, Bank, Platform, Credit Card, Landlord. Right in orange: Your Keys, Your Node, BTC Pay, AI Agent, Your Domain." />
+    <figcaption><span class="fig-label">Fig. IV</span> Agency given away. Agency claimed.</figcaption>
+  </figure>
+
+  <p class="attrib">↳ The "agency or annihilation" framing is Jeff Booth's; the extension to platform and production dependency is the sovereignpreneur's adaptation of it.</p>
+
+  <hr class="divider" />
+
+  <!-- THE CATEGORY -->
+  <div class="category">
+    <h3>The Sovereignpreneur</h3>
+    <p>A new category of economic actor.</p>
+    <ul>
+      <li>Sovereign over <strong>money</strong> — Bitcoin held in self-custody, independent of banking permission.</li>
+      <li>Sovereign over <strong>production</strong> — AI-leveraged output, independent of the capital, credentials, and platforms that used to gatekeep it.</li>
+      <li>Sovereign over <strong>lifestyle</strong> — geographic, relational, and temporal freedom, independent of permission entirely.</li>
+    </ul>
+
+    <figure class="portrait" style="margin-top:32px;margin-bottom:16px;">
+      <img src="images/sov-stack-v2.png" alt="Four-tier pyramid: Physics (first principles) at the base, Sovereign Money, AI Leverage, Independence at the top." />
+      <figcaption><span class="fig-label">Fig. V</span> The Sovereignty Stack.</figcaption>
+    </figure>
+
+    <p class="small" style="margin-top:24px;margin-bottom:0;">The stack runs both directions. Each layer reinforces the others. Sound money makes AI leverage worth accumulating. AI leverage makes sound money worth saving. Both together make the human layer — the layer where actual life is lived — recoverable from the systems that have historically consumed it.</p>
+  </div>
+
+  <!-- ON THE END -->
+  <h2>On the End</h2>
+  <p class="axiom-label">The Telos</p>
+
+  <p>Sovereignty is not the end. Sovereignty is the precondition.</p>
+
+  <p>The end is <strong>time</strong> — the hours fiat civilization leases back to you at interest, and a deflationary one returns outright. What you do with those hours is not prescribed here. The pre-industrial human knew what unrented time was for: creation, health, people, thought, the slow work of being alive. A technological civilization has spent a century teaching the species to forget. The sovereignpreneur is someone who remembers, and builds the conditions under which remembering is possible.</p>
+
+  <p class="pullquote">The top tier of the stack is human freedom. What each person makes of it is their own.</p>
+
+  <!-- THE PROTOCOL -->
+  <h2>The Three-Path Protocol</h2>
+  <div class="protocol">
+    <div class="protocol-step">
+      <span class="verb">Create.</span>
+      Share what you are learning. Build something with AI. Sell AI-based services to businesses that will not be replaced by AI. Any of the three generates content, skill, and revenue. All three feed each other.
+    </div>
+    <div class="protocol-step">
+      <span class="verb">Own.</span>
+      Do not hold sovereign money on someone else's rails. Vibe-code your infrastructure. Run your own node, your own payment processor, your own VPS. Let AI close the technical gap that used to gatekeep this layer. Keep an <strong>Airlock</strong> between the two worlds — Bitcoin is the balance sheet; fiat is a disposable API token for the legacy system. Convert only what the month demands.
+    </div>
+    <div class="protocol-step">
+      <span class="verb">Scale.</span>
+      Intention-driven development: start with the end state, direct AI to build it, move from outcome to outcome. Let Bitcoin, content, and AI skill compound in parallel. Deploy strategically once per halving cycle. Level up.
+    </div>
+  </div>
+
+  <figure class="breakout">
+    <img src="images/renting-vs-owning-rails.png" alt="Two stacks. Left labeled RENTING with Bitcoin on top of Coinbase, Stripe, AWS, Cloudflare. Right labeled OWNING with Bitcoin on top of self-custody, BTC Pay Server, Umbrel, your VPS." />
+    <figcaption><span class="fig-label">Fig. VI</span> Holding Bitcoin on someone else's rails is still renting.</figcaption>
+  </figure>
+
+  <figure class="breakout">
+    <img src="images/flywheel-4.png" alt="A circular flywheel diagram: Learn, Build, Share, Attract, Discover, Solve, with a branch to Save in Bitcoin." />
+    <figcaption><span class="fig-label">Fig. VII</span> The Solopreneur Flywheel. Every path feeds the next.</figcaption>
+  </figure>
+
+  <p class="small">Full operational detail is given in the keynote and workshop.</p>
+
+  <figure class="breakout">
+    <img src="images/compounding-growth.png" alt="Three exponential curves rising over time — Bitcoin in orange, Content in cyan, Creation Capacity in amber — compounding together." />
+    <figcaption><span class="fig-label">Fig. VIII</span> Bitcoin compounds. Content compounds. Creation capacity compounds. Sovereignty is their product.</figcaption>
+  </figure>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <p>You already hold your own keys.</p>
+    <p>The next move is to stop renting your output.</p>
+  </div>
+
+  <!-- CONTRIBUTE -->
+  <div class="contribute">
+    <svg class="contribute-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    <h3>This is a living document.</h3>
+    <p>The axioms are fixed. The language around them sharpens over time. Source, revisions, and contribution guide live on GitHub — open a PR to fix a typo, tighten a paragraph, or propose a Further Reading addition.</p>
+    <a class="contribute-cta" href="https://github.com/jordanurbs/sovereignpreneur" target="_blank" rel="noopener">
+      <span>github.com/jordanurbs/sovereignpreneur</span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <!-- SIGNATURE -->
+  <div class="signature">
+    <div class="name">Jordan Urbs</div>
+    <div>2026 · createownscale.com</div>
+    <div>Lightning: <a href="mailto:zap@jordanurbs.com">zap@jordanurbs.com</a></div>
+    <div><a href="https://jordanurbs.com" target="_blank" rel="noopener">jordanurbs.com</a> · <a href="https://jordanurbs.substack.com" target="_blank" rel="noopener">The Sovereignpreneur Substack</a> · <a href="https://njump.me/npub148hn8mqmrwpmdh0lzskv9x3z0f8y76e7n9c4ftgw5evpq7pnaevqewgqrr" target="_blank" rel="noopener">nostr</a></div>
+  </div>
+
+  <!-- ATTRIBUTIONS -->
+  <div class="attributions">
+    <h3>Attributions &amp; Sources</h3>
+
+    <p>This declaration does not claim originality for its foundations. It claims the synthesis. Sources and inspirations, with gratitude:</p>
+
+    <ul>
+      <li><strong>Jeff Booth</strong> — for the core thesis that the natural state of the free market is deflation, and for the framing of agency as the line between surviving and being annihilated in the coming monetary rupture. See <a href="https://www.jeffbooth.ca/books" target="_blank" rel="noopener"><em>The Price of Tomorrow</em> (2020)</a> and his ongoing public work.</li>
+      <li><strong><a href="https://bitcoinlens.net" target="_blank" rel="noopener">The Bitcoin Lens</a></strong> — an independent research project that treats Bitcoin as a thermodynamic object and names its block-time as the first externally observable quantized time coordinate. Axiom II is a direct tribute to their "remove fiat as the interpretive intermediary" methodology and their declaration format.</li>
+      <li><strong>James Dale Davidson &amp; Lord William Rees-Mogg</strong> — <a href="https://en.wikipedia.org/wiki/The_Sovereign_Individual" target="_blank" rel="noopener"><em>The Sovereign Individual</em></a> (1997), for the civilizational backdrop against which this entire project is legible.</li>
+      <li><strong>The cypherpunks</strong>, <strong>Satoshi Nakamoto</strong>, and the thousands of silent builders keeping the Bitcoin protocol decentralized and secure. Without them, none of this has a foundation.</li>
+      <li><strong>The open-source self-hosting community</strong> — BTC Pay Server, Umbrel, Start9, and the infrastructure that makes Axiom IV operable for non-engineers.</li>
+    </ul>
+
+    <p class="small" style="margin-top:24px;">Any errors of interpretation are the author's. Where this declaration extends the work of others, it does so in good faith, with the intention of making their ideas more actionable for a specific reader: the individual operator standing at the intersection of Bitcoin and AI, asking what to do now.</p>
+  </div>
+
+  <!-- FURTHER READING -->
+  <div class="attributions">
+    <h3>Further Reading — On Freedom</h3>
+
+    <p>This declaration does not try to prove human freedom from physics — a thing physics alone cannot do. It borrows structural vocabulary from the serious literature on freedom, and disavows the loose quantum-spiritual literature often confused with it. Readers who want to verify the lineage:</p>
+
+    <ul>
+      <li><strong>Jenann Ismael</strong>, <em>How Physics Makes Us Free</em> — why physics neither proves nor refutes human agency. <a href="https://casbs.stanford.edu/how-physics-makes-us-free" target="_blank" rel="noopener">Overview</a>.</li>
+      <li><strong>Carlo Rovelli</strong>, "Free Will, Determinism, Quantum Theory and Statistical Fluctuations: A Physicist's Take" — the serious physicist's rebuttal to both hard determinism and quantum-mystical rescue attempts; the line that freedom is not lawlessness but the structure of possibility is Rovelli's. <a href="https://www.edge.org/conversation/carlo_rovelli-free-will-determinism-quantum-theory-and-statistical-fluctuations-a" target="_blank" rel="noopener">Edge.org</a>.</li>
+      <li><strong>Yaron Ilan et al.</strong>, on the <strong>constrained-disorder principle</strong> — freedom as a system property defined by coherent constraint paired with adaptive variability, rather than by the removal of constraint. The physical analog for what this declaration calls the shift from arbitrary constraint to coherent constraint.</li>
+      <li><strong>Ian Carter</strong>, "Positive and Negative Liberty," <em>Stanford Encyclopedia of Philosophy</em> — the Berlin distinction this declaration folds into Axiom IV. <a href="https://plato.stanford.edu/entries/liberty-positive-negative/" target="_blank" rel="noopener">SEP entry</a>.</li>
+      <li><strong>Philip Pettit</strong>, on republican non-domination — why "they haven't interfered yet" is not freedom. See the broader SEP entry on <a href="https://plato.stanford.edu/entries/republicanism/" target="_blank" rel="noopener">republicanism</a>.</li>
+      <li><strong><em>Human Freedom Index 2025</em></strong> (Cato Institute / Fraser Institute) — an operational map of personal and economic freedom worldwide. <a href="https://www.cato.org/human-freedom-index/2025" target="_blank" rel="noopener">Report</a>.</li>
+      <li><strong>Philip Moriarty</strong>, "Quantum mysticism is a mistake" — the critique this declaration is written to stay on the correct side of. <a href="https://iai.tv/articles/quantum-mysticism-is-a-mistake-philip-moriarty-auid-2437" target="_blank" rel="noopener">IAI News</a>.</li>
+    </ul>
+
+    <p class="small" style="margin-top:24px;">Axiom I is Booth. Axiom II is the Bitcoin Lens, grounded philosophically in the constrained-disorder principle and Rovelli's anti-mysticism. Axioms III and IV are synthesis, accountable to the sources above.</p>
+  </div>
+
+  <!-- REVISIONS -->
+  <div class="revisions">
+    <h3>Revisions</h3>
+    <p>New insights, refinements, and extensions will be logged here, timestamped. This is a living document. The axioms are fixed. The language around them will sharpen over time.</p>
+    <p><strong>2026-04-21 — Constraint pass.</strong> Replaced the Bejan constructal-law paragraph in Axiom II with a stronger philosophical move drawn from the broader physics-of-freedom literature: freedom is not the absence of constraint but the presence of <strong>maximal responsive capacity within a coherent system of constraints</strong>. This is the same move said twice — Bitcoin replaces arbitrary monetary constraint with coherent thermodynamic constraint; AI-leveraged production replaces arbitrary employer constraint with coherent energy/judgment constraint. The reference-frame shift in Axiom II is now doing real philosophical work rather than borrowing an engineering metaphor. Bejan removed from attributions and Further Reading. <strong>Carlo Rovelli</strong> added as the explicit anti-quantum-mysticism anchor; the <strong>constrained-disorder principle</strong> added as the systems-level citation.</p>
+
+    <p><strong>2026-04-20 — Telos pass.</strong> Added a short section between "The Sovereignpreneur" and "The Three-Path Protocol" naming what the stack is <em>for</em>. The axioms tell the reader what to refuse; the protocol tells them what to do; neither, previously, said what it was aimed at. The telos is time — the hours leased back to the self at interest by a fiat civilization, returned by a deflationary one. What each person makes of that time is left open. This closes the gap a philosophy-savvy reader would name first: a document that specifies negative liberty in detail without ever sketching the positive-liberty horizon it presumes.</p>
+
+    <p><strong>2026-04-20 — Hardening pass.</strong> Three reinforcements. (1) Axiom III: the human anchor is not only taste and judgment — it is the one who holds the keys, signs the work, and carries the consequences. Accountability reinforces taste; it does not replace it. (2) Axiom IV: "own your audience" clarified as the list, not the follower count; centralized attention is a channel, not a home. Added the claim that frontier compute is a convenience, not a requirement — a laptop and a few solar panels is enough to produce at scale. (3) Three-Path Protocol / Own: introduced the <strong>Airlock</strong> — Bitcoin is the balance sheet; fiat is a disposable API token for the legacy system. Convert only what the month demands.</p>
+
+    <p style="margin-bottom:0;"><strong>2026-04-20 — Physics pass.</strong> Audited the declaration against the serious freedom-and-physics literature (Ismael, Berlin/Carter, Pettit, and the critiques of quantum mysticism by Moriarty and others). (1) Axiom I: replaced "physics will win" with "the arithmetic wins." The claim being made is economic and exponential, not quantum. Honest about what kind of inevitability this is. (2) Axiom IV: added two cautions — negative liberty is not positive liberty; non-interference is not non-domination. Clearing employers and platforms is the precondition, not the finish line. (3) Added a Further Reading section pointing to primary sources so readers can verify the lineage and distinguish this stance from the quantum-woo adjacent literature it is sometimes mistaken for.</p>
+  </div>
+
+</main>
+
+<script>
+// ============================================================
+// HERO ANIMATIONS — Intro runs on load, scroll only takes over
+// after the title+subtitle reveal finishes.
+// ============================================================
+
+gsap.registerPlugin(ScrollTrigger);
+
+const SCRAMBLE_CHARS = '!<>-_\\/[]{}—=+*^?#________';
+
+function randomHex() {
+  return '0x' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+}
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Hero intro: scroll stays locked until user tries to scroll. First scroll
+// intent plays the timeline; scroll remains locked until the timeline ends.
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const hasHash = !!window.location.hash;
+
+function unlockScroll() {
+  document.body.classList.remove('intro-locked');
+}
+
+// Block scroll attempts while locked.
+function preventScroll(e) {
+  if (document.body.classList.contains('intro-locked')) {
+    e.preventDefault();
+  }
+}
+window.addEventListener('wheel', preventScroll, { passive: false });
+window.addEventListener('touchmove', preventScroll, { passive: false });
+window.addEventListener('keydown', (e) => {
+  if (!document.body.classList.contains('intro-locked')) return;
+  const blocked = [' ', 'PageDown', 'PageUp', 'ArrowDown', 'ArrowUp', 'Home', 'End'];
+  if (blocked.includes(e.key)) e.preventDefault();
+});
+
+// ---- Build title character spans ----
+const titleEl = document.querySelector('.hero-title');
+const titleText = titleEl.dataset.text;
+const titleChars = [];
+titleEl.innerHTML = '';
+for (let i = 0; i < titleText.length; i++) {
+  const span = document.createElement('span');
+  span.classList.add('char');
+  span.textContent = titleText[i];
+  titleEl.appendChild(span);
+  titleChars.push(span);
+}
+
+// ---- Hex readout: live Bitcoin chain tip (mempool.space) ----
+const tipLabelEl = document.querySelector('[data-role="tip-label"]');
+const tipHashEl = document.querySelector('[data-role="tip-hash"]');
+
+async function refreshChainTip() {
+  try {
+    const heightRes = await fetch('https://mempool.space/api/blocks/tip/height', { cache: 'no-store' });
+    const height = parseInt(await heightRes.text(), 10);
+    if (!Number.isFinite(height)) return;
+    tipLabelEl.textContent = 'TIP: ' + height.toLocaleString();
+
+    const hashRes = await fetch('https://mempool.space/api/block-height/' + height, { cache: 'no-store' });
+    const hash = (await hashRes.text()).trim();
+    if (hash && /^[0-9a-f]+$/i.test(hash)) {
+      // Show leading zeros (proof-of-work signature) + a mantissa slice.
+      tipHashEl.textContent = '0x' + hash.slice(0, 24);
+    }
+  } catch (_) {
+    // Offline or blocked — leave the placeholder as-is.
+  }
+}
+
+refreshChainTip();
+// Bitcoin block cadence is ~10 min; poll every 60s is plenty.
+setInterval(refreshChainTip, 60000);
+
+// ============================================================
+// INTRO TIMELINE — runs once, on load. Decodes title + types
+// subtitle to completion BEFORE any scroll-driven motion begins.
+// ============================================================
+
+const META_FULL = 'cat declaration_001.txt';
+const SUBTITLE_FULL = 'A Declaration of Production';
+
+const metaTextEl = document.querySelector('.meta-text');
+metaTextEl.textContent = '';
+const subtitleTextEl = document.querySelector('.subtitle-text');
+subtitleTextEl.textContent = '';
+
+const intro = gsap.timeline({
+  paused: true,
+  onComplete: () => {
+    unlockScroll();
+    initScrollAnimations();
+  }
+});
+
+// Start intro on first scroll attempt (wheel, touch, or keyboard scroll key).
+let introStarted = false;
+function startIntro() {
+  if (introStarted) return;
+  introStarted = true;
+  intro.play();
+}
+window.addEventListener('wheel', startIntro, { passive: true });
+window.addEventListener('touchstart', startIntro, { passive: true });
+window.addEventListener('keydown', (e) => {
+  const triggers = [' ', 'PageDown', 'PageUp', 'ArrowDown', 'ArrowUp', 'Home', 'End', 'Enter'];
+  if (triggers.includes(e.key)) startIntro();
+});
+// Also start on click anywhere (mobile tap to skip lock idle).
+window.addEventListener('click', startIntro, { passive: true });
+
+// 1. HUD corners draw in
+intro.to('.hud-corner', {
+  opacity: 1,
+  duration: 0.3,
+  stagger: 0.05,
+  ease: 'power2.out',
+}, 0);
+
+// 2. Grid fades in subtly
+intro.to('.hero-grid', {
+  opacity: 1,
+  duration: 0.7,
+  ease: 'power2.out',
+}, 0);
+
+// 3. Hex readout fades in
+intro.to('.hex-readout', {
+  opacity: 1,
+  duration: 0.4,
+}, 0.1);
+
+// 4. Meta terminal fades in, then types
+intro.to('.hero-meta', {
+  opacity: 1,
+  duration: 0.25,
+}, 0);
+
+intro.to({}, {
+  duration: META_FULL.length * 0.025,
+  onUpdate: function () {
+    const p = this.progress();
+    const len = Math.floor(p * META_FULL.length);
+    metaTextEl.textContent = META_FULL.substring(0, len);
+  },
+  onComplete: () => { metaTextEl.textContent = META_FULL; },
+}, 0.1);
+
+// 5. Title scramble/decode — each char scrambles briefly then resolves.
+const titleStart = 0.35;
+const perChar = 0.05;
+titleChars.forEach((char, i) => {
+  const charStart = titleStart + i * perChar;
+  // scramble phase
+  intro.to(char, {
+    duration: 0.35,
+    opacity: 1,
+    onStart: () => {
+      char.classList.add('scramble');
+    },
+    onUpdate: function () {
+      if (this.progress() < 1) {
+        char.textContent = SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
+      }
+    },
+    onComplete: () => {
+      char.classList.remove('scramble');
+      char.classList.add('revealed');
+      char.textContent = titleText[i];
+    },
+  }, charStart);
+});
+
+const titleEnd = titleStart + titleChars.length * perChar + 0.35;
+
+// 6. Divider scan after title
+intro.add(() => {
+  document.querySelector('.hero-divider').classList.add('scanning');
+}, titleEnd + 0.1);
+
+// 7. Subtitle types on — only after title is fully revealed
+const subtitleStart = titleEnd + 0.3;
+intro.to({}, {
+  duration: SUBTITLE_FULL.length * 0.04,
+  onUpdate: function () {
+    const p = this.progress();
+    const len = Math.floor(p * SUBTITLE_FULL.length);
+    subtitleTextEl.textContent = SUBTITLE_FULL.substring(0, len);
+  },
+  onComplete: () => { subtitleTextEl.textContent = SUBTITLE_FULL; },
+}, subtitleStart);
+
+// 8. Lede fades up after subtitle finishes
+const subtitleEnd = subtitleStart + SUBTITLE_FULL.length * 0.04;
+intro.to('.hero-lede', {
+  opacity: 1,
+  y: 0,
+  duration: 0.8,
+  ease: 'power2.out',
+}, subtitleEnd + 0.1);
+
+// 9. Scroll indicator appears last
+intro.to('.scroll-indicator', {
+  opacity: 1,
+  duration: 0.8,
+  ease: 'power2.out',
+}, subtitleEnd + 0.6);
+
+// Reduced motion or deep link: skip the gated intro entirely.
+if (prefersReduced || hasHash) {
+  metaTextEl.textContent = META_FULL;
+  subtitleTextEl.textContent = SUBTITLE_FULL;
+  titleChars.forEach((c, i) => {
+    c.classList.add('revealed');
+    c.classList.remove('scramble');
+    c.textContent = titleText[i];
+  });
+  gsap.set(['.hud-corner', '.hero-grid', '.hex-readout', '.hero-meta', '.scroll-indicator'], { opacity: 1 });
+  gsap.set('.hero-lede', { opacity: 1, y: 0 });
+  unlockScroll();
+  initScrollAnimations();
+}
+
+// ============================================================
+// SCROLL ANIMATIONS — only wire these up AFTER the intro finishes,
+// so the hero reveal can't be interrupted by early scrolling.
+// ============================================================
+
+function initScrollAnimations() {
+  // Hero grid subtle scale/parallax on scroll
+  gsap.to('.hero-grid', {
+    scale: 1.05,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: 1,
+    }
+  });
+
+  // Fade out scroll indicator as user scrolls
+  gsap.to('.scroll-indicator', {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: '.hero',
+      start: '10% top',
+      end: '40% top',
+      scrub: true,
+    }
+  });
+
+  // Section reveals
+  document.querySelectorAll('h2, h3, .pullquote, .category').forEach(el => {
+    el.classList.add('reveal-section');
+  });
+
+  gsap.utils.toArray('.reveal-section').forEach((el) => {
+    gsap.to(el, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        toggleActions: 'play none none reverse',
+      }
+    });
+  });
+
+  // Pullquote glow
+  gsap.utils.toArray('.pullquote').forEach(el => {
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 75%',
+      onEnter: () => el.classList.add('glow'),
+      onLeaveBack: () => el.classList.remove('glow'),
+    });
+  });
+
+  // Figure reveals
+  gsap.utils.toArray('figure').forEach(fig => {
+    gsap.from(fig, {
+      opacity: 0,
+      y: 40,
+      scale: 0.98,
+      duration: 1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: fig,
+        start: 'top 85%',
+        toggleActions: 'play none none reverse',
+      }
+    });
+  });
+
+  // Protocol step stagger
+  gsap.from('.protocol-step', {
+    opacity: 0,
+    x: -30,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '.protocol',
+      start: 'top 80%',
+      toggleActions: 'play none none reverse',
+    }
+  });
+
+  ScrollTrigger.refresh();
+}
+</script>
+
+</body>
+</html>
