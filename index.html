@@ -211,6 +211,31 @@ p strong {
 
 em { color: var(--amber); font-style: italic; }
 
+/* ---- Meta note (philosophical aside) ---- */
+.meta-note {
+  margin: 40px 0;
+  padding: 24px 28px;
+  background: rgba(247, 147, 26, 0.04);
+  border: 1px solid var(--orange-line);
+  border-left: 3px solid var(--orange);
+  border-radius: 2px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+.meta-note .meta-label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+.meta-note p { margin: 0 0 10px; }
+.meta-note p:last-child { margin-bottom: 0; }
+.meta-note strong { color: var(--text); font-weight: 600; }
+
 /* ---- Prose links (brand-colored, match attributions) ---- */
 main p a, main li a {
   color: var(--orange);
@@ -889,7 +914,11 @@ figure.portrait img {
 
   <p>Frontier compute is a convenience, not a requirement. A laptop and a few panels is already enough to produce at scale. Centralized attention is a channel, not a home — the audience lives where you can reach them without permission.</p>
 
-  <p>Two cautions to keep this honest. First, freedom from coercion is not the same as freedom to act well. Removing employers, banks, and platforms clears the field; it does not supply self-mastery. <a href="https://plato.stanford.edu/entries/liberty-positive-negative/" target="_blank" rel="noopener">Negative liberty</a> is the precondition; positive liberty — the ability to actually direct a life — is the companion work, and the work never ends. Second, non-interference is not the same as non-domination. A hosting provider who has not yet deplatformed you is still a hosting provider who could. Sovereignty is measured by arbitrary power held over you, not by whether that power has been exercised yet.</p>
+  <aside class="meta-note">
+    <span class="meta-label">// Meta-note — keeping this honest</span>
+    <p><strong>Freedom from coercion is not the same as freedom to act well.</strong> Removing employers, banks, and platforms clears the field; it does not supply self-mastery. <a href="https://plato.stanford.edu/entries/liberty-positive-negative/" target="_blank" rel="noopener">Negative liberty</a> is the precondition; positive liberty — the ability to actually direct a life — is the companion work, and the work never ends.</p>
+    <p><strong>Non-interference is not the same as non-domination.</strong> A hosting provider who has not yet deplatformed you is still a hosting provider who could. Sovereignty is measured by arbitrary power held over you, not by whether that power has been exercised yet.</p>
+  </aside>
 
   <p>The default state of a human who refuses to outsource these decisions — and does the interior work that outsourcing used to paper over — is sovereignty.</p>
 
