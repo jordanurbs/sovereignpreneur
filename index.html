@@ -211,6 +211,50 @@ p strong {
 
 em { color: var(--amber); font-style: italic; }
 
+/* ---- Inline term tooltips (HTO / LTO etc.) ---- */
+.term-tip {
+  position: relative;
+  border-bottom: 1px dotted var(--orange-line);
+  cursor: help;
+  color: inherit;
+}
+.term-tip::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--bg-raised);
+  color: var(--text);
+  border: 1px solid var(--orange-line);
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  width: max-content;
+  max-width: 280px;
+  white-space: normal;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 30;
+}
+.term-tip:hover::after,
+.term-tip:focus::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 640px) {
+  .term-tip::after { left: 0; transform: translateX(0) translateY(4px); max-width: 240px; }
+  .term-tip:hover::after, .term-tip:focus::after { transform: translateX(0) translateY(0); }
+}
+
 /* ---- Meta note (philosophical aside) ---- */
 .meta-note {
   margin: 40px 0;
@@ -965,7 +1009,7 @@ figure.portrait img {
   <div class="protocol">
     <div class="protocol-step">
       <span class="verb">Create.</span>
-      Develop a solopreneur flywheel: <strong>(1)</strong> Build something — anything — with AI. <strong>(2)</strong> Share what you learn (or what you build). <strong>(3)</strong> Sell what you built (or what you learned). Pay bills with minimal HTO clients; later, scale higher-leverage LTOs with a growing audience.
+      Develop a solopreneur flywheel: <strong>(1)</strong> Build something — anything — with AI. <strong>(2)</strong> Share what you learn (or what you build). <strong>(3)</strong> Sell what you built (or what you learned). Pay bills with minimal <span class="term-tip" tabindex="0" data-tip="High-Touch Offer — bespoke, hands-on work (consulting, done-for-you services, 1:1 coaching). High revenue per client, high effort per dollar.">HTO</span> clients; later, scale higher-leverage <span class="term-tip" tabindex="0" data-tip="Low-Touch Offer — productized or self-serve (courses, templates, communities, software). Low effort per sale, scales with audience.">LTOs</span> with a growing audience.
     </div>
     <div class="protocol-step">
       <span class="verb">Own.</span>
