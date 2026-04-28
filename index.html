@@ -98,10 +98,31 @@ body.intro-locked {
 }
 .banner-github:hover { color: var(--orange); border-color: var(--orange-line); }
 .banner-github svg { width: 14px; height: 14px; fill: currentColor; }
+.banner-academy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 3px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.banner-academy:hover { color: var(--orange); border-color: var(--orange-line); }
+.banner-academy .arrow { font-size: 12px; opacity: 0.7; }
+.banner-academy .label-short { display: none; }
 @media (max-width: 640px) {
   .banner { padding: 8px 12px; gap: 10px; font-size: 11px; }
   .banner-github span { display: none; }
   .banner-github { padding: 4px 8px; }
+  .banner-academy { padding: 4px 8px; font-size: 10px; }
+  .banner-academy .label-long { display: none; }
+  .banner-academy .label-short { display: inline; }
 }
 
 /* ---- Layout ---- */
@@ -829,6 +850,11 @@ figure.portrait img {
 
 <div class="banner">
   <span class="banner-text"><strong>Published 2026 — Open Access</strong> &nbsp;·&nbsp; A declaration of language and stance.</span>
+  <a class="banner-academy" href="https://aicaptains.academy?utm_source=createownscale&amp;utm_medium=declaration&amp;utm_campaign=solopreneurs" target="_blank" rel="noopener">
+    <span class="label-long">Learning AI as a sovereign individual?</span>
+    <span class="label-short">AI Captains</span>
+    <span class="arrow">→</span>
+  </a>
   <a class="banner-github" href="https://github.com/jordanurbs/sovereignpreneur" target="_blank" rel="noopener" aria-label="Contribute on GitHub">
     <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
     <span>Contribute</span>
@@ -1074,6 +1100,7 @@ figure.portrait img {
     <div>2026 · createownscale.com</div>
     <div>Lightning: <a href="mailto:zap@jordanurbs.com">zap@jordanurbs.com</a></div>
     <div><a href="https://jordanurbs.com" target="_blank" rel="noopener">jordanurbs.com</a> · <a href="https://jordanurbs.substack.com" target="_blank" rel="noopener">The Sovereignpreneur Substack</a> · <a href="https://njump.me/npub148hn8mqmrwpmdh0lzskv9x3z0f8y76e7n9c4ftgw5evpq7pnaevqewgqrr" target="_blank" rel="noopener">nostr</a></div>
+    <div style="margin-top:14px; font-size:13px; color:var(--text-muted); line-height:1.6;">Want to learn AI as a sovereign individual? The third tier of the stack is taught at <a href="https://aicaptains.academy?utm_source=createownscale&amp;utm_medium=declaration&amp;utm_campaign=solopreneurs" target="_blank" rel="noopener" style="color:var(--orange);">AI Captains Academy</a> — you don't need to build alone.</div>
     <div class="ai-credit" style="margin-top:18px; font-size:12px; color:var(--text-muted); font-style:italic; line-height:1.6;">This document was synthesized with Opus 4.7 in Claude Code. Critiques and arguments to strengthen it were made by GPT-5.4. Hero design quirks were created by Kimi K2.6 while graphics were generated with Nano Banana 2 via the Venice API.</div>
   </div>
 
@@ -1120,6 +1147,7 @@ figure.portrait img {
   <div class="revisions">
     <h3>Revisions</h3>
     <p>New insights, refinements, and extensions will be logged here, timestamped. This is a living document. The axioms are fixed. The language around them will sharpen over time.</p>
+    <p><strong>2026-04-27 — Academy pass.</strong> Added a subtle wayfinding link to <a href="https://aicaptains.academy?utm_source=createownscale&amp;utm_medium=declaration&amp;utm_campaign=solopreneurs" target="_blank" rel="noopener">AI Captains Academy</a> — the venue where the third tier of the stack (AI as leverage) is taught. Two placements. (1) Sticky header banner: a low-emphasis link for cold landers who want a softer entry than the full declaration. (2) Footer credit line, paired with the existing jordanurbs.com signature, framing the academy as the place where the AI tier of the stack gets operationalized — and where a solopreneur does not have to build alone. Solopreneur UTM chosen over the beginner UTM because the declaration's reader is past curious; community is the missing piece, not a 30-hour intro.</p>
     <p><strong>2026-04-26 — Greenhall pass.</strong> Imported diagnostic vocabulary from Jordan Greenhall's "The Coming Great Transition v 2.0" without importing its theological prescription. Five edits. (1) Axiom I: one sentence introducing the rivalrous/generative substrate distinction beneath deflation — exponential abundance is the macro-shadow of generative assets eating rivalrous ones. (2) Axiom III: human-as-oath-bearer clause added — "a model can generate; only a person can promise" — extending the existing keys/signs/consequences anchor into the coordination layer where sovereign producers will eventually meet other sovereign producers. (3) On the End: a paragraph naming <em>opulent nihilism</em> as the interior failure mode of a sovereignty stack built without interior work. (4) Three-Path / Own: parenthetical on counterfeit trust — sovereignty over money does not confer sovereignty over the signals you trust. (5) Further Reading: Greenhall added with the same disclaimer pattern used for Davidson — cited for mechanism, not prescription. Humanist construction preserved. Document remains a single-actor declaration; the network-layer arguments Greenhall is making are deliberately not imported.</p>
 
     <p><strong>2026-04-25 — Infinite-game pass.</strong> Folded James P. Carse's finite/infinite-game distinction into "On the End." The telos section previously named <em>what</em> the stack was for (time) but not the <em>shape</em> of the game it enables. Three additions. (1) Two new paragraphs in "On the End" frame fiat capitalism as a finite game (played to win and end — quarterly earnings, exits, liquidity events) and the sovereignpreneur stack as an infinite game (played to continue play — compound, hold, extend the horizon). The line <em>Why would I ever sell this?</em> is now load-bearing as the question that distinguishes the category. (2) Three-Path Protocol / Scale: one sentence added — the halvings are finite cycles nested inside an infinite game; the goal is never the next peak, it is the next decade. (3) Carse added to Further Reading. Closes the gap between the declaration's existing build-to-own posture and the philosophical frame that names what kind of <em>game</em> such a posture is playing.</p>
