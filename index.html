@@ -435,6 +435,41 @@ main p a:hover, main li a:hover { border-bottom-color: var(--orange); }
 .contribute-cta:hover .arrow { transform: translateX(3px); }
 
 /* ---- Signature ---- */
+/* ---- Ecosystem nav ---- */
+.ecosystem {
+  margin: 56px 0 8px;
+  padding: 24px 0 4px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.ecosystem-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 14px;
+}
+.ecosystem-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+}
+.ecosystem-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--orange-line);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.ecosystem-links a:hover { color: var(--orange); border-bottom-color: var(--orange); }
+.ecosystem-links .here {
+  color: var(--orange);
+  font-weight: 600;
+}
+
 .signature {
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
@@ -1098,6 +1133,21 @@ figure.portrait img {
     </a>
   </div>
 
+  <!-- ECOSYSTEM -->
+  <nav class="ecosystem" aria-label="The Sovereignpreneur ecosystem">
+    <div class="ecosystem-label">The Sovereignpreneur ecosystem</div>
+    <div class="ecosystem-links">
+      <a href="https://jordanurbs.com" target="_blank" rel="noopener">Home</a>
+      <a href="https://createownscale.com" target="_blank" rel="noopener">The Declaration</a>
+      <a href="https://sovereignpreneur.me" target="_blank" rel="noopener">What is a Sovereignpreneur?</a>
+      <span class="here" aria-current="page">Open-source mirror ▸ you are here</span>
+      <a href="https://sovereigntyatlas.com" target="_blank" rel="noopener">Sovereignty Atlas</a>
+      <a href="https://jordanurbs.substack.com" target="_blank" rel="noopener">Substack</a>
+      <a href="https://youtube.com/@jordanurbsai" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://x.com/jordanurbs" target="_blank" rel="noopener">X</a>
+    </div>
+  </nav>
+
   <!-- SIGNATURE -->
   <div class="signature">
     <div class="name">Jordan Urbs</div>
@@ -1152,6 +1202,7 @@ figure.portrait img {
   <div class="revisions">
     <h3>Revisions</h3>
     <p>New insights, refinements, and structural extensions will be logged here, timestamped. This is a living document — the synthesis tightens over time, and well-argued challenges to the thesis are welcome.</p>
+    <p><strong>2026-06-22 — Ecosystem pass.</strong> Added a small wayfinding nav before the signature, linking the brand properties — <a href="https://jordanurbs.com" target="_blank" rel="noopener">jordanurbs.com</a>, the <a href="https://createownscale.com" target="_blank" rel="noopener">declaration</a>, <a href="https://sovereignpreneur.me" target="_blank" rel="noopener">sovereignpreneur.me</a> (the definition page), this open-source source, and the <a href="https://sovereigntyatlas.com" target="_blank" rel="noopener">Sovereignty Atlas</a> — plus Substack, YouTube, and X. The current property is marked "you are here." Mirrored across the whole ecosystem at the same time so the cross-references run in every direction. HTML-only affordance; the markdown prose is unchanged. Signature domain left as <em>createownscale.com</em> until the sovereignpreneur.me DNS cutover lands (the apex still 301s to createownscale for now).</p>
     <p><strong>2026-06-22 — Pendulum pass.</strong> Imported two structural images from Vadim Zeland's <em>Reality Transurfing</em> (Ch. 1–2) — the mechanism only, never the metaphysics, following the Davidson/Greenhall mechanism-not-prescription pattern. Three edits. (1) Axiom II: a paragraph naming fiat as a <strong>pendulum</strong> — a mass-belief structure (network effect + belief layer) that develops its own laws and makes adherents act in its interest — with Bitcoin as the proof the mechanism is ordinary economics rather than mysticism, and the <em>captured vs. chosen</em> distinction (fiat is a captured pendulum; Bitcoin a chosen one, fed deliberately and left at will). Attribution line updated to credit Zeland for the image, stripped of cosmology. (2) Axiom III: the mine-don't-manifest line added after "priced in energy, not salary" — naming <strong>manifestation</strong> as the counterfeit of sovereign production and Proof of Work as its refutation ("intention without expended work is an unconfirmed transaction"; "the intention is not the block"). This is the declaration's explicit defense against the law-of-attraction reading Zeland's surface invites. (3) Further Reading: Zeland added with the mechanism-not-prescription disclaimer. Scope unchanged: still a single-actor document; the pendulum describes the system the actor exits, not an expansion into network/coordination territory.</p>
 
     <p><strong>2026-04-28 — Openness pass.</strong> Softened the contribute-block and revisions-intro language across all three files. The previous framing — <em>"the axioms are fixed; only the language sharpens"</em> — overstated the closure. The thesis is open to structural enhancement, not just typo fixes. New language invites PRs to "sharpen a paragraph, propose a Further Reading addition, or argue for a structural change to the thesis itself," and the revisions intro now welcomes "well-argued challenges." Three small drift fixes mirrored across the deploys at the same time: <strong>finite/infinite-game</strong> bolding restored here, the Greenhall Medium link added to the createownscale deploy, and the Academy-pass revision text aligned across both. Prose now in lockstep across all three files.</p>
